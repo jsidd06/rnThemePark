@@ -1,4 +1,6 @@
-# RnThemePark
+# React Native Styling Utilities
+
+### This module provides a collection of styling utilities for React Native applications, including metrics sizes, font sizes, and layout styles for consistent design across platforms.
 
 ## Platform Support
 
@@ -6,18 +8,14 @@
 | ------- | ------- |
 | support | support |
 
-# Metrics and Layout Styles
-
-This module provides a set of constants for metric sizes, font sizes, and layout styles to be used consistently across your React Native application.
-
-## Metric Sizes (MetricsSizes)
+# Metrics Sizes (MetricsSizes)
 
 ### Screen Metrics
 
 - `SCREEN_WIDTH`: Width of the screen.
 - `SCREEN_HEIGHT`: Height of the screen.
-- `BASE_HEIGHT`: Base height calculated as a fraction of the screen width.
-- `BASE_RADIUS`: Base radius calculated as a fraction of the screen width.
+- `SET_HEIGHT`: Set height calculated as a fraction of the screen width.
+- `SET_RADIUS`: Set radius calculated as a fraction of the screen width.
 
 ### Sizes Metrics
 
@@ -28,16 +26,16 @@ This module provides a set of constants for metric sizes, font sizes, and layout
 - `LARGE`: Large size calculated based on the screen width.
 - `XLARGE`: Extra-large size calculated based on the screen width.
 - `XXLARGE`: Double extra-large size calculated based on the screen width.
-- `BASE40`: Base size calculated as 40 times a fraction of the screen width.
-- `BASE50`: Base size calculated as 50 times a fraction of the screen width.
-- `BASE80`: Base size calculated as 80 times a fraction of the screen width.
-- `BASE100`: Base size calculated as 100 times a fraction of the screen width.
-- `BASE200`: Base size calculated as 200 times a fraction of the screen width.
-- `BASE150`: Base size calculated as 150 times a fraction of the screen width.
-- `BASE220`: Base size calculated as 220 times a fraction of the screen width.
-- `BASE250`: Base size calculated as 250 times a fraction of the screen width.
-- `BASE120`: Base size calculated as 120 times a fraction of the screen width.
-- `BASE110`: Base size calculated as 110 times a fraction of the screen width.
+- `SET40`: set size calculated as 40 times a fraction of the screen width.
+- `SET50`: set size calculated as 50 times a fraction of the screen width.
+  SET80`: set size calculated as 80 times a fraction of the screen width.
+- `SET100`: set size calculated as 100 times a fraction of the screen width.
+- `SET200`: set size calculated as 200 times a fraction of the screen width.
+- `SET150`: set size calculated as 150 times a fraction of the screen width.
+- `SET220`: set size calculated as 220 times a fraction of the screen width.
+- `SET250`: set size calculated as 250 times a fraction of the screen width.
+- `SET120`: set size calculated as 120 times a fraction of the screen width.
+- `SET110`: set size calculated as 110 times a fraction of the screen width.
 
 ### Negative Metrics
 
@@ -45,13 +43,21 @@ This module provides a set of constants for metric sizes, font sizes, and layout
 - `NEG_SMALL`: Negative small size calculated based on the screen width.
 - `NEG_REGULAR`: Negative regular size calculated based on the screen width.
 
-### Rating Width
+### Width Metrics
 
-- `RATING_SMALL`: Rating width as a fraction of the screen width.
-- `RATING_MEDIUM`: Rating width as a fraction of the screen width.
-- `RATING_LARGE`: Rating width as a fraction of the screen width.
-- `RATING_XLARGE`: Rating width as a fraction of the screen width.
-- `RATING_XXLARGE`: Rating width as the full screen width.
+- `WIDTH_SMALL`:Width calculated as a quarter of the screen width.
+- `WIDTH_MEDIUM`: Width calculated as a third of the screen width.
+- `WIDTH_LARGE`:Width calculated as half of the screen width.
+- `WIDTH_XLARGE`: Width calculated as one and a half times the screen width.
+- `WIDTH_XXLARGE`: Full screen width.
+
+### Height Metrics
+
+- `HEIGHT_SMALL` : Height calculated as a quarter of the screen height.
+- `HEIGHT_MEDIUM` : Height calculated as a third of the screen height.
+- `HEIGHT_LARGE` : Height calculated as half of the screen height.
+- `HEIGHT_XLARGE` : Height calculated as one and a half times the screen height.
+- `HEIGHT_XXLARGE` : Full screen height.
 
 ## Font Sizes (FontSize)
 
@@ -75,6 +81,7 @@ This object provides various pre-defined layout styles to be used in your applic
 - `row`: Row layout.
 - `justifySBContent`: Row layout with justified content.
 - `fill`: Flex property set to 1, useful for filling available space.
+- `fillB` : Flex property set to 1 with a white background color.
 - `positionA`: Absolute positioning.
 - `positionR`: Relative positioning.
 - `rowACenter`: Row layout with center-aligned items.
@@ -91,4 +98,28 @@ This object provides various pre-defined layout styles to be used in your applic
 - `rowSpaceEvenly`: Row layout with space-evenly justification and center-aligned items.
 - `columnCenter`: Column layout with justified content and center-aligned items.
 
-Feel free to use these constants throughout your application for consistent styling and layout.
+## Wrapper Component (Wrapper)
+
+### The Wrapper component is provided for convenient wrapping of your content with consistent padding based on the platform.
+
+#### Wrapper Props
+
+- `children`: React components or elements to be wrapped.
+- `style`: Additional style to be applied to the wrapper component.
+
+## Example Usage
+
+```
+import { Wrapper } from '../Themes';
+
+const YourComponent = () => {
+  return (
+    <Wrapper>
+      {/* Your component content */}
+    </Wrapper>
+  );
+};
+
+```
+
+Feel free to leverage these utilities to achieve a cohesive and responsive design in your React Native application.
