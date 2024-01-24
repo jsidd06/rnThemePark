@@ -1,6 +1,6 @@
 import {Text} from 'react-native';
 import React from 'react';
-import {Wrapper, FontSize} from '../Themes';
+import {FontSize, Wrapper} from 'rn-theme-park';
 
 const HomeScreen = () => {
   return (

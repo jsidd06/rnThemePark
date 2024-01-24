@@ -8,6 +8,16 @@
 | ------- | ------- |
 | support | support |
 
+## if you are using react-native-typescript
+
+- then use this code in tsconfig.json file
+
+```
+"compilerOptions": {
+    "jsx": "react"
+  },
+```
+
 # Metrics Sizes (MetricsSizes)
 
 ### Screen Metrics
